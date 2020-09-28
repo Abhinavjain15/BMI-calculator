@@ -1,0 +1,128 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title>BMI Calculator</title>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+			<link rel="stylesheet" href="/stylesheets/bmi.css">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		</head>
+		<body onload="clearTab()">
+			<nav class="navbar bg-dark navbar-dark ">
+				<div class="container">
+					<a class="navbar-brand " href="#"><i class="fas fa-weight"></i><span id="heading">BMI Calculator</span></a>
+				</div>
+			</nav>
+			<div class="container" id="containerJumbotron">
+				<div class="jumbotron">
+					<h1 class="display-4 text-center"><strong>Calculate your Body Mass Index</strong></h1>
+					<hr class="my-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm border-right">
+								<!-- <nav class="navbar navbar-dark bg-dark"> -->
+									<!-- Navbar content -->		<div class="tab">
+										<div class="btn-group" role="group" aria-label="Basic example">
+											<button type="button" class="btn btn-secondary tablinks active" onclick="clickHandle(event, 'metric')">Metric Units</button>
+											<button class="btn btn-secondary tablinks" onclick="clickHandle(event, 'us')">US Units</button>
+										</div>
+									</div>
+									<!-- </nav> -->
+								<!-- <div class="tab">
+									<div class="btn-group" role="group" aria-label="Basic example">
+										<button class="btn btn-secondary active tablinks" onclick="clickHandle(event, 'metric')">Metric Units</button>
+										<button class="btn btn-secondary tablinks" onclick="clickHandle(event, 'us')">US Units</button>
+									</div>
+								</div> -->
+								<div id="metric" class="tabcontent">
+									<div class="card-group">
+										<div class="card text-center text-white bg-dark">
+											<div class="card-body">
+												<h5 class="card-title">Weight</h5>
+												<p>
+													<input type="number" class="form-control" id="weight_m" placeholder="Kg">
+												</p>
+
+											</div>
+										</div>
+
+										<div class="card text-center text-white bg-dark">
+											<div class="card-body">
+												<h5 class="card-title">Height</h5>
+												<p>
+													<input type="number" class="form-control" id="height" placeholder="Cm">
+												</p>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div id="us" class="tabcontent">
+									<div class="card-group">
+										<div class="card text-center text-white bg-dark">
+											<div class="card-body">
+												<h5 class="card-title">Weight</h5>
+												<p>
+													<input type="number" class="form-control" id="weight_u" placeholder="Pounds">	
+												</p>
+												
+											</div>
+										</div>
+
+										<div class="card text-center text-white bg-dark">
+											<div class="card-body">
+												<h5 class="card-title">Height</h5>
+												<div class="input-group">
+													
+													<input type="number" class="form-control" id="feet" placeholder="Feet">	
+													<input type="number" class="form-control" id="inches" placeholder="Inches">
+													
+												</div>	
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="calculate_paddings">
+									<button type="button" onClick="calculate()" class="btn btn-grad btn-block">Calculate</button>	
+								</div>
+								<div id="result" class="text-center"></div>
+							</div>
+							<div class="col-sm">
+								<table class="table table-sm table-bordered text-center">
+									<thead>
+										<tr class="bg-my">
+											<th scope="col">Nutritional Status</th>
+											<th scope="col">BMI cut-off</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="table-secondary">
+											<td>Underweight</td>
+											<td><18.5</td>
+										</tr>
+										<tr class="table-success">
+											<td>Normal</td>
+											<td>18.5-24.9</td>
+										</tr>
+										<tr class="table-warning">
+											<td>Overweight</td>
+											<td>25-29.9</td>
+										</tr>
+										<tr class="table-danger">
+											<td>Obese</td>
+											<td>≥30</td>
+										</tr>
+									</tbody>
+								</table>
+								<div id="interpretation" class="text-center"></div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<nav class="navbar bg-dark navbar-dark "id ="navBotheight">
+					<a id ="navBottom"class="navbar-brand " href="#"><i class="fab fa-instagram"></i><span id="follow">@happyheart523</span></a>
+			</nav>
+			<script type="text/javascript" src="/javascripts/bmi.js"></script> 
+		</body>
+		</html>
