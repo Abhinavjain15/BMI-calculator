@@ -22,7 +22,6 @@ function calculate(){
 			return;
 		}
 		height= feet * 30.48 + inches * 2.54;
-		alert(height);
 		weight=pounds*0.45359237;
 	}
 	result = 1.3 *(weight / (height/100)**2.5);
