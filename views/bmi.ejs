@@ -6,6 +6,8 @@
 			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 			<link rel="stylesheet" href="/stylesheets/bmi.css">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+			<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+			<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=IBM+Plex+Sans:ital@1&display=swap" rel="stylesheet"
 		</head>
 		<body onload="clearTab()">
 			<nav class="navbar bg-dark navbar-dark ">
@@ -20,20 +22,12 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-sm border-right">
-								<!-- <nav class="navbar navbar-dark bg-dark"> -->
-									<!-- Navbar content -->		<div class="tab">
-										<div class="btn-group" role="group" aria-label="Basic example">
-											<button type="button" class="btn btn-secondary tablinks active" onclick="clickHandle(event, 'metric')">Metric Units</button>
-											<button class="btn btn-secondary tablinks" onclick="clickHandle(event, 'us')">US Units</button>
-										</div>
-									</div>
-									<!-- </nav> -->
-								<!-- <div class="tab">
+								<div class="tab">
 									<div class="btn-group" role="group" aria-label="Basic example">
-										<button class="btn btn-secondary active tablinks" onclick="clickHandle(event, 'metric')">Metric Units</button>
+										<button type="button" class="btn btn-secondary tablinks active" onclick="clickHandle(event, 'metric')">Metric Units</button>
 										<button class="btn btn-secondary tablinks" onclick="clickHandle(event, 'us')">US Units</button>
 									</div>
-								</div> -->
+								</div>
 								<div id="metric" class="tabcontent">
 									<div class="card-group">
 										<div class="card text-center text-white bg-dark">
@@ -89,7 +83,7 @@
 								<div id="result" class="text-center"></div>
 							</div>
 							<div class="col-sm">
-								<table class="table table-sm table-bordered text-center">
+								<table id="tablepd" class="table table-sm table-bordered text-center">
 									<thead>
 										<tr class="bg-my">
 											<th scope="col">Nutritional Status</th>
@@ -114,15 +108,23 @@
 											<td>≥30</td>
 										</tr>
 									</tbody>
-								</table>
-								<div id="interpretation" class="text-center"></div>
+								</table>								
 							</div>
 						</div>
+						
+							<div id="interpretation"></div>
+						
+							<div class="ui red small message">There are some limitations to determining your health using BMI alone.
+								<ul>
+									<li>Athletes can have muscular builds. Since muscle weighs more than fat, BMI may overestimate body fat for these individuals.</li>
+									<li>Older adults may have lost muscle. In this case, BMI may underestimate body fat.</li>
+								</ul>
+							</div>
 					</div>
 				</div>	
 			</div>
 			<nav class="navbar bg-dark navbar-dark "id ="navBotheight">
-					<a id ="navBottom"class="navbar-brand " href="#"><i class="fab fa-instagram"></i><span id="follow">@happyheart523</span></a>
+				<a id ="navBottom"class="navbar-brand " href="#"><i class="fab fa-instagram"></i><span id="follow">@lets.get_healthy_</span></a>
 			</nav>
 			<script type="text/javascript" src="/javascripts/bmi.js"></script> 
 		</body>
